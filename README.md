@@ -4,6 +4,8 @@
 
 # Sample
 
+```php
+<?php
 	$cors = new HttpCors();
 	$cors->addRule('http://*.a.com');
 	$cors->addRule('http://c.b.com');
@@ -15,3 +17,4 @@
 		'maxAge'        => 0,    # Access-Control-Max-Age
 	]);
 	$cors->response();# 自动根据跨域情况，内部执行 exit 操作
+```
