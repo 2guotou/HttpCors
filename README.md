@@ -5,9 +5,9 @@
 # Sample
 
 ```php
-<?php
 	$cors = new HttpCors();
-	$cors->addRule('http://*.a.com');
+	$cors->addRule('*');//允许所有的Origin进行访问
+	$cors->addRule('http://*.a.com');//允许某子域名访问
 	$cors->addRule('http://c.b.com');
 	$cors->addRule('http://e.d.com', [
 		'allowMethods'  => ['put','post','get','options'],# Access-Control-Allow-Methods
